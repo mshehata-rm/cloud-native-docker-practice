@@ -1,0 +1,21 @@
+# Key value pairs
+course: Amazon EKS Course
+# Nested Objects
+instructor:
+  firstname: Abdennour
+  lastname: TOUMI
+  website: 'https://kubernates.tn'
+# Multi Line String in Array (1D Array)
+sections:
+  - Introduction
+  - Deploy EKS Cluster
+  - Deploy App with Helm
+  - Conclusion
+# Array of Objects
+lectures:
+  - id: 1
+    name: Introduction
+    minutes: 5
+  - id: 2
+    name: EKS with Terraform
+    minutes: 14

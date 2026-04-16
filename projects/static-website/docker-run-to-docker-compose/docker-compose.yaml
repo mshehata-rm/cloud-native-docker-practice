@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts-jdk11
+    ports:
+      - 8080:8080
+      - 50000:50001
+    environment:
+      JENKINS_SLAVE_AGENT_PORT: 50001
