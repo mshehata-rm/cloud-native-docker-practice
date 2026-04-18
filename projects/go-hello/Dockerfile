@@ -1,3 +1,5 @@
 FROM golang:1.16.5-alpine
+WORKDIR /code
 COPY . /code
-CMD [ "go", "run", "src/app.go" ]
+ENTRYPOINT ["go"]
+CMD [ "run", "src/app.go" ]
