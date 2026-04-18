@@ -13,7 +13,28 @@ This is a webapp with 2 simple endpoints:
 
 <!-- `go run src/app.go` -->
 
-`docker compose up -d`
+`docker-compose up -d`
+
+- For building the image for the app service
+
+  - We use `docker-compose build app` when:
+    you changed Dockerfile
+    you want to rebuild only one service
+    you’re debugging build issues
+
+`docker-compose build app`
+
+then run docker-compose
+
+`docker-compose up -d`
+
+- For debugging and see our dokcer shell inside of the container (ignore entrypoint)
+
+`docker run -it --entrypoint sh go-hello-app`
+
+- For hot reload or hot debug:
+
+`docker-compose restart app`
 
 <!-- Then navigate to http://localhost:8090 -->
 Then navigate to http://localhost:8099
