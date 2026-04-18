@@ -1,5 +1,8 @@
 FROM golang:1.16.5-alpine
-WORKDIR /code
+# WORKDIR /code
+#    HOST <CONTAINER-PATH>
 COPY . /code
-ENTRYPOINT ["go"]
-CMD [ "run", "src/app.go" ]
+
+
+ENTRYPOINT [ "go" ]
+CMD [ "run", "/code/src/app.go" ]
