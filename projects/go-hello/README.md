@@ -15,24 +15,24 @@ This is a webapp with 2 simple endpoints:
 
 `docker-compose up -d`
 
-- For building the image for the app service
-
-  - We use `docker-compose build app` when:
-    you changed Dockerfile
-    you want to rebuild only one service
-    you’re debugging build issues
+For building the image for the app service
 
 `docker-compose build app`
+
+We use `docker-compose build app`:
+  - you changed Dockerfile
+  - you want to rebuild only one service
+  - you’re debugging build issues
 
 then run docker-compose
 
 `docker-compose up -d`
 
-- For debugging and see our dokcer shell inside of the container (ignore entrypoint)
+For debugging and see our dokcer shell inside of the container (ignore entrypoint)
 
 `docker run -it --entrypoint sh go-hello-app`
 
-- For hot reload or hot debug:
+For hot reload or hot debug:
 
 `docker-compose restart app`
 
